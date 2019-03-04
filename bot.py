@@ -1,6 +1,7 @@
 
 import tweepy
-from datetime import date, datetime
+from datetime import date
+import datetime
 
 
 consumer_key= 'A7W4xgF21W7qAa23u7V7hhvIC'
@@ -22,11 +23,19 @@ print(daysbetween.days)
 print(10000/daysbetween.days)
 
 buyoutcalc = 75000000-((7500000/365)*daysbetween.days)
-buyout= int(buyoutcalc)
-print(buyout)
 
+lumpdate= date.today()+datetime.timedelta(days=60)
+
+buyout= int(buyoutcalc)
+
+lumpsum= buyout*.25
+
+
+print(buyout)
+print(lumpsum)
+print(lumpdate.strftime('%B %d'))
 user=api.me()
 print(user.name)
 
-api.update_status('If he were fired today, Jimbo Fisher would be owed $'+ str(buyout)+ ' by Texas A&M #12thman #wrts #gigemgang2020')
+api.update_status('If he were fired today, Jimbo Fisher would be owed $'+ str(buyout)+ ' by Texas A&M, with $' +str(lumpsum)+' due by '+ lumpdate.strftime('%B %d')+' #12thman #wrts #gigemgang2020')
 print('done')
