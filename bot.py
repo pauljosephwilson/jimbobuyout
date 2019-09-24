@@ -1,7 +1,10 @@
 
+
+
 import tweepy
 from datetime import date
 import datetime
+
 
 
 consumer_key= 'A7W4xgF21W7qAa23u7V7hhvIC'
@@ -37,5 +40,5 @@ print(lumpdate.strftime('%B %d'))
 user=api.me()
 print(user.name)
 
-api.update_status('If he were fired today, Jimbo Fisher would be owed $'+ str(buyout)+ ' by Texas A&M, with $' +str(lumpsum)+' due by '+ lumpdate.strftime('%B %d')+' #12thman #wrts #gigemgang2020')
+api.update_status('If he were fired today, Jimbo Fisher would be owed $'+ str('{:,.2f}'.format(buyout))+ ' by Texas A&M, with $' +str('{:,.2f}'.format(lumpsum))+' due by '+ lumpdate.strftime('%B %d')+' #12thman #wrts #gigemgang2020')
 print('done')
