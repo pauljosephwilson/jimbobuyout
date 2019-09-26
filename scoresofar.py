@@ -34,8 +34,8 @@ conferenceWinsThisYear= aggy.conference_wins
 conferenceWinsTotal= aggy.conference_wins + aggy2018.conference_wins
 
 #calculate $ paid per point scored
-moneyPerPoint2019=(paid/((aggy.points_per_game*4)))
-moneyPerPointTotal=(paid/((aggy.points_per_game*4)+(aggy2018.points_per_game*13)))
+moneyPerPoint2019=(paid/((aggy.points_per_game*gamesThisYear)))
+moneyPerPointTotal=(paid/((aggy.points_per_game*4)+(aggy2018.points_per_game*gamesTotal)))
 
 
 #get rid of undefined while they still dont have a conference win
