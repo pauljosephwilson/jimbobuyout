@@ -24,6 +24,11 @@ paid = int(75000000-buyouttweet.buyoutcalc)
 winsThisYear= aggy.wins
 winsTotal=  aggy.wins+ aggy2018.wins
 
+#game counter
+gamesThisYear = aggy.wins + aggy.losses
+gamesTotal= winsTotal + aggy.losses + aggy2018.losses
+print(gamesThisYear, gamesTotal)
+
 #conference wins math
 conferenceWinsThisYear= aggy.conference_wins
 conferenceWinsTotal= aggy.conference_wins + aggy2018.conference_wins
