@@ -6,10 +6,6 @@ import datetime
 d0= date(2018,1,1)
 d1= date.today()
 daysbetween= abs(d1-d0)
-print(d0)
-print(d1)
-print(daysbetween.days)
-print(10000/daysbetween.days)
 
 buyoutcalc = 75000000-((7500000/365)*daysbetween.days)
 
